@@ -1,7 +1,6 @@
+import { Hono } from "hono";
 
-import { Hono } from 'hono'
-
-const stringPages = new Hono()
+const stringPages = new Hono();
 
 const layout = (title: string, body: string) => `
   <!doctype html>
@@ -19,18 +18,14 @@ const layout = (title: string, body: string) => `
       ${body}
     </body>
   </html>
-`
+`;
 
-stringPages.get('/', (c) => {
-  const name = c.req.query('name') ?? 'stranger'
+stringPages.get("/", (c) => {
+  const name = c.req.query("name") ?? "stranger";
 
-  return c.html(
-    layout('Home', `<h1>Hello, ${name}!</h1>`)
-  )
-})
+  return c.html(layout("Home", `<h1>Hello, ${name}!</h1>`));
+});
 
-stringPages.get('/team', (c) =>
-  c.html(layout('Team', '<h1>Team</h1>'))
-)
+stringPages.get("/team", (c) => c.html(layout("Team", "<h1>Team</h1>")));
 
-export { stringPages }
+export { stringPages };

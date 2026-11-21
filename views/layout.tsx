@@ -1,5 +1,4 @@
-
-import type { Child } from 'hono/jsx'
+import type { Child } from "hono/jsx";
 
 export const Layout = (props: { title: string; children?: Child }) => (
   <html lang="en">
@@ -11,4 +10,4 @@ export const Layout = (props: { title: string; children?: Child }) => (
       <main>{props.children}</main>
     </body>
   </html>
-)
+);

@@ -1,20 +1,26 @@
 {
   "name": "laborator-hono",
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
-    "typecheck": "bun check",
-    "dev": "bun --watch src/index.tsx"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^7"
+    "check": "ultracite check",
+    "dev": "bun --watch src/index.tsx",
+    "fix": "ultracite fix",
+    "prepare": "husky",
+    "typecheck": "bun check"
   },
   "dependencies": {
     "@hono/bun": "^1.0.1",
     "eta": "^4.6.0",
     "hono": "^4.13.19"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8",
+    "@types/bun": "latest",
+    "husky": "^9.1.7",
+    "ultracite": "8.3.1"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
   }
 }
