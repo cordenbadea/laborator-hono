@@ -1,0 +1,19 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= it.title %> · Office site</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <nav>
+      <a href="/eta/hello">Home</a> ·
+      <a href="/eta/team">Team</a>
+    </nav>
+
+    <main>
+      <%~ it.body %>
+    </main>
+  </body>
+</html>

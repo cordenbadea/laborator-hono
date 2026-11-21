@@ -1,0 +1,9 @@
+<% layout("./layout") %>
+
+<h1>Team</h1>
+
+<ul>
+  <% it.team.forEach((member) => { %>
+    <li><%= member %></li>
+  <% }) %>
+</ul>
